@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Login</title>
+		<meta charset="utf-8">
+		<meta  name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="icon" href="img/QM.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+		.a{
+			padding-top: 240px;
+			}
+		body{
+			background-image: url("/QuizMaster/img/Login.png"), url("/QuizMaster/img/Blank.jpg");
+			background-attachment: scroll, fixed;
+			height: 100%, 100%;
+			width: 100%, 100%;
+			background-repeat: no-repeat, no-repeat;
+			background-position: center, center;
+			}
+		</style>
+	</head>
+	
+	<body Onload=document.login.uname.focus()>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<a class="navbar-brand" href="/QuizMaster/views/HomePage.php"><b>QuizMaster</b></a>
+				</div>
+				 <div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/QuizMaster/views/SignUpPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+						<li  class="active"><a href="/QuizMaster/views/LoginPage.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<form class="form-horizontal a" method="POST"  style="color:white" name="login" action="/QuizMaster/validation/LoginValidate.php">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-4" for="username">Username:</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="uname" placeholder="Enter Username">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-4" for="pwd">Password:</label>
+				<div class="col-sm-4"> 
+					<input type="password" class="form-control" name="pword" placeholder="Enter Password"></input>
+				</div>
+			</div>
+  
+			<div class="form-group"> 
+				<div class="col-md-offset-2 col-xs-4 col-md-4">
+					<center><button type="submit" class="btn btn-primary">Login</button>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<button type="submit" formaction="/QuizMaster/views/FacultyLogin.html" class="btn btn-primary">Faculty Login</button></center>
+				</div>
+			</div>
+			
+			
+		</form>
+		
+		<form class="form-horizontal" method="POST" style="color:white" action="/QuizMaster/views/SignUpPage.html">
+			<div class="form-group">
+				<label class="control-label col-sm-3 col-md-5 col-lg-6" for="NewUser">New User? Sign Up now!</label>
+			</div>
+			
+			<div class="col-md-offset-2 col-xs-4 col-md-6">
+				<center><button type="submit" class="btn btn-primary">Sign Up!</button></center>
+			</div>
+		</form>
+	</body>
+</html>
