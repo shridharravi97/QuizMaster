@@ -19,6 +19,7 @@
 			width: 100%, 100%;
 			background-repeat:no-repeat, no-repeat;
 			background-position: center, center;
+            overflow-x: hidden;
 			}
 		</style>
 	</head>
@@ -52,21 +53,21 @@
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="name">Full Name:</label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="name" placeholder="Enter Full Name" required>
+					<input type="text" class="form-control" name="name" placeholder="Enter Full Name" required autocomplete="off">
 				</div>
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="username">Username:</label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="username" placeholder="Enter User Name" required>
+					<input type="text" class="form-control" name="username" placeholder="Enter User Name" required autocomplete="off">
 				</div>
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="email">Email:</label>
 				<div class="col-sm-4">
-					<input type="email" class="form-control" name="email" placeholder="Enter Email" required>
+					<input type="email" class="form-control" name="email" placeholder="Enter Email" required autocomplete="off">
 				</div>
 			</div>
 			
@@ -83,7 +84,7 @@
 					<input type="text" disabled value="+91" class="form-control" id="code">
 				</div>
 				<div class="col-sm-3">
-					<input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" placeholder="Enter Phone Number" required>
+					<input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" placeholder="Enter Phone Number" required autocomplete="off">
 				</div>
 			</div>
 			
@@ -132,7 +133,7 @@
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="RNo">Roll Number:</label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="roll" placeholder="Enter Roll Number" required>
+					<input type="text" class="form-control" name="roll" maxlength="8" pattern="[1-2][1-2][0-9][A][1-7][0-2][0-9][0-9]" placeholder="Enter Roll Number" required autocomplete="off">
 				</div>
 			</div>
 			

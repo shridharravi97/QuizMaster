@@ -133,7 +133,7 @@
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/CreateQuiz.php"><button type="button" class="btn btn-primary">Create New Quiz</button></a></div>
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
-		</div></div></center>
+		</center></div></div>
 	</h4>
 </body>
 </html>

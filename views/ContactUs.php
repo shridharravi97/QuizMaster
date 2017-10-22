@@ -10,7 +10,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style>
-		h2,h3{
+		h4,h2{
 			color: #fff;
 			}
 		hr{
@@ -18,13 +18,12 @@
 			margin-right: 240px;
 			}
 		body{
-			background-image: url("/QuizMaster/img/Blank.jpg");
+           	background-image: url("/QuizMaster/img/Blank.jpg");
 			background-attachment: fixed;
 			height: 100%;
 			width: 100%;
 			background-repeat:no-repeat;
 			background-position: center;
-			margin-bottom: 100px;
 			}
 
 		iframe{
@@ -86,10 +85,11 @@
 			</div>
 		</nav>
 		
-		<center><iframe width="60%" height="70%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJzYUsXtvD5zsRboFzfS3FJu8&zoom=18&key=AIzaSyAkqp6wFkgki3a1ERD1baQcwpqHpjKrR3I" allowfullscreen></iframe></center><br>
+		<center><iframe width="60%" height="70%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJzYUsXtvD5zsRboFzfS3FJu8&zoom=18&key=AIzaSyAkqp6wFkgki3a1ERD1baQcwpqHpjKrR3I" allowfullscreen></iframe></center>
 		<hr>
 		<center>
 			<h2><span class="glyphicon glyphicon-map-marker"></span> Address</h2>
-			<h3>Sri Chandrasekarendra Saraswati Vidyapuram Sector-V, Nerul Navi Mumbai - 400706.</h3>
+			<h4>Sri Chandrasekarendra Saraswati Vidyapuram Sector-V, Nerul, Navi Mumbai - 400706.</h4>
+            <h4><span class="glyphicon glyphicon-earphone"></span> Phone: 022-61082400/02/27/17/19</h4>
 	</body>
 </html>

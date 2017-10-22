@@ -20,6 +20,7 @@
 			width: 100%, 100%;
 			background-repeat: no-repeat, no-repeat;
 			background-position: center, center;
+            overflow-x: hidden;
 			}
 		</style>
 	</head>

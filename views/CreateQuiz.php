@@ -11,15 +11,15 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style>
 		.a{
-			padding-top: 140px;
+			padding-top: 240px;
 		}
 		body{
-			background-image: url("/QuizMaster/img/Blank.jpg");
-			background-attachment: fixed;
-			height: 100%;
-			width: 100%;
-			background-repeat:no-repeat;
-			background-position: center;
+			background-image: url("/QuizMaster/img/CreateQuiz.png"), url("/QuizMaster/img/Blank.jpg");
+			background-attachment: scroll, fixed;
+			height: 100%, 100%;
+			width: 100%, 100%;
+			background-repeat: no-repeat, no-repeat;
+			background-position: center, center;
 			}
 		</style>
 	</head>

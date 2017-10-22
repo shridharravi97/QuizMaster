@@ -101,8 +101,11 @@
 			<div><label class="control-label col-sm-4 col-lg-4 col-md-4">Roll No:</label>
 				<div><label class="control-label col-sm-8 col-md-8 col-lg-8"> '.$_SESSION['roll'].'</label></div>
 			</div><br><br>
-		</div></div>
-		<center><a href="EditProfile.php"><button type="button" class="btn btn-primary">Edit Profile</button></a></center>';
+		  <center>
+          <div class="col-xs-4 col-md-4"><a href="EditProfile.php"><button type="button" class="btn btn-primary">Edit Profile</button></a></div>
+          <div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
+          <div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/StudentViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
+        </div></div></center>';
 		}
 		else if($_SESSION['role']=="faculty")
 		{echo '<div class="container"  style="color:white"><div class="row">
@@ -116,7 +119,7 @@
 			<br><br><center>
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/CreateQuiz.php"><button type="button" class="btn btn-primary">Create New Quiz</button></a></div>
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
-			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
+			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/FacultyViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
 			</div></div></center>';
 		}?>
 		</h4>
