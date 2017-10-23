@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<?php
-    session_start();
-    $_SESSION['count']=$_SESSION['count']+1;
-    header("Location: /QuizMaster/views/AttemptQuiz.php");
-=======
 <?php
     session_start();
     $server="localhost";
@@ -27,13 +21,14 @@
 	else
 	{
 		$_SESSION['count']=$_SESSION['count']+1;
-		if($_SESSION['count']<$_SESSION['total_ques'])
+		if($_SESSION['count']<$_SESSION['total_ques']-1)
 		{
+            
 			header("Location: /QuizMaster/views/AttemptQuiz.php");
 		}
 		else
 		{
-			$query="SELECT count(rollno) from result having id='".$quizid."' and rollno='".$rollno."' and studans=answer";
+			$query="SELECT count(rollno) from result where rollno='".$rollno."' and id='".$quizid."' and studans=answer";
 			$qresult=mysqli_query($con,$query);
 			if(!$qresult)
 				die("Result Calculation failed: ".mysqli_error($con));
@@ -43,10 +38,10 @@
 				{
 					$get=mysqli_fetch_array($qresult);
 					$_SESSION['marks']=$get[0];
+                  header("Location: /QuizMaster/views/AttemptQuiz.php");
 				}
 			}
-			header("Location: /QuizMaster/views/AttemptQuiz.php");			
+						
 		}
 	}
->>>>>>> Store Result changes
 ?>
