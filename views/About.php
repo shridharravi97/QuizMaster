@@ -65,13 +65,19 @@
 											<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>';
 								if($_SESSION['role']=="student")
 								{
-									echo '<li class="divider"></li>
-											<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
 								}
 								else if($_SESSION['role']=="faculty")
 								{
-									echo '<li class="divider"</li>
-											<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
 								}
 
 								echo '</ul>
@@ -90,22 +96,22 @@
                         <img class="img-responsive img-rounded" src="/QuizMaster/img/1.jpg" height="200" width="250">
                         <h3 style="color:white">Shridhar Ravi</h3>
                         <h4 style="color:white">Back-End Developer</h4>
-                        <a href="https://www.facebook.com/shridharravi97" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="https://github.com/shridharravi97" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a>
-                    </div>
-                    <div class="col-lg-4">
-                        <img class="img-responsive img-rounded" src="/QuizMaster/img/2.jpg" height="200" width="250">
-                        <h3 style="color:white">Siddhanth V</h3>
-                        <h4 style="color:white">Front-End Developer</h4>
-                        <a href="https://www.facebook.com/siddhanth.iyer.5" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a>
+                        <span title="Facebook"><a href="https://www.facebook.com/shridharravi97" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span title="GitHub"><a href="https://github.com/shridharravi97" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a></span>
                     </div>
                     <div class="col-lg-4">
                         <img class="img-responsive img-rounded" src="/QuizMaster/img/3.jpg" height="200" width="250">
+                        <h3 style="color:white">Siddhanth V</h3>
+                        <h4 style="color:white">Front-End Developer</h4>
+                        <span title="Facebook"><a href="https://www.facebook.com/siddhanth.iyer.5" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span title="GitHub"><a href="https://github.com/sidv98" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a></span>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="img-responsive img-rounded" src="/QuizMaster/img/2.jpg" height="200" width="250">
                         <h3 style="color:white">Pradyumna Bapat</h3>
                         <h4 style="color:white">Web Designer</h4>
-                        <a href="https://www.facebook.com/pradyumna.bapat" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="#" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a>
+                        <span title="Facebook"><a href="https://www.facebook.com/pradyumna.bapat" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span title="GitHub"><a href="https://github.com/Pradyumna0297" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a></span>
                     </div>
                 </div>
             </div>

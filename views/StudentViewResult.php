@@ -60,8 +60,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -71,7 +71,10 @@
 							<ul class="dropdown-menu">
 								<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>
 								<li class="divider"></li>
-								<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>
+								<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>
+								<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>
+								<li class="divider"></li>
+								<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>
 							</ul>
 						</li>
 						<li><a href="/QuizMaster/validation/Logout.php"><span class="glyphicon glyphicon-off"></span> Logout</a></li>

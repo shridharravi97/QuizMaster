@@ -12,6 +12,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="/QuizMaster/data/materialize.css" type="text/css" rel="stylesheet"/>
+		<link href="/QuizMaster/data/materialize.min.css" type="text/css" rel="stylesheet"/>	
 		<style>
 		body{
 			background-image: url("/QuizMaster/img/Home.png"), url("/QuizMaster/img/Blank.jpg");
@@ -21,6 +24,20 @@
 			background-repeat: no-repeat, no-repeat;
 			background-position: center, center;
 			}
+		.a{
+			padding-top: 240px;
+		}
+		
+		nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+    height: 50px; 
+    line-height: 50px;
+}
+        .divider{
+            width: 100%;
+            }
+            .typed-cursor{
+                opacity: 0;
+            }
 		</style>
 	</head>
 	
@@ -38,8 +55,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<?php
@@ -58,13 +75,19 @@
 											<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>';
 								if($_SESSION['role']=="student")
 								{
-									echo '<li class="divider"></li>
-											<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
 								}
 								else if($_SESSION['role']=="faculty")
 								{
-									echo '<li class="divider"</li>
-											<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
 								}
 
 								echo '</ul>
@@ -76,5 +99,30 @@
 				</div>
 			</div>
 		</nav>
+		
+		<div class="container-fluid a">
+			<div class="row">
+				<div class="col-xs-offset-3 col-xs-8 col-lg-8"style="color:white; font-size:30px">
+					
+						<div class="card-content nerdyBlack-text">
+						<i><h4>"The purpose of a Quiz is <h4 class="element"></h4></h4></i>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<script src="/QuizMaster/data/typed.js"> </script>
+		<script>
+   document.addEventListener("DOMContentLoaded", function(){
+       
+     Typed.new(".element", {
+       strings: ["not to shame anyone.''","not to embarass anyone.''","to make sure that everyone is on the same page.''"],
+       typeSpeed: 40,
+         backDelay: 1000,
+         loop: true,
+     });
+   });
+ </script>
 	</body>
 </html>

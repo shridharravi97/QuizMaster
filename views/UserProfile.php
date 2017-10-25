@@ -37,8 +37,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -47,13 +47,20 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>
-								<li class="divider"></li>
 								<?php if($_SESSION['role']=="student")
 								{
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>';
+									echo '<li class="divider"></li>';
 									echo '<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
 								}
 								else if($_SESSION['role']=="faculty")
 								{
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li class="divider"></li>';
 									echo '<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
 								}?>
 							</ul>
@@ -117,9 +124,8 @@
 				<div><label class="control-label col-sm-8 col-md-8 col-lg-8"> '.$_SESSION['empcode'].'</label></div>
 			</div>
 			<br><br><center>
-			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/CreateQuiz.php"><button type="button" class="btn btn-primary">Create New Quiz</button></a></div>
-			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
-			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/FacultyViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
+			<div class="col-xs-6 col-md-6"><a href="/QuizMaster/views/CreateQuiz.php"><button type="button" class="btn btn-primary">Create New Quiz</button></a></div>
+			<div class="col-xs-6 col-md-6"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
 			</div></div></center>';
 		}?>
 		</h4>

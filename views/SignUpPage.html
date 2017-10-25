@@ -38,8 +38,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active"><a href="/QuizMaster/views/SignUpPage.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -53,7 +53,7 @@
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="name">Full Name:</label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="name" placeholder="Enter Full Name" required autocomplete="off">
+					<input type="text" class="form-control" name="name" placeholder="Enter Full Name" required pattern="[a-zA-Z][a-zA-z ]*" autocomplete="off">
 				</div>
 			</div>
 			
@@ -67,7 +67,7 @@
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="email">Email:</label>
 				<div class="col-sm-4">
-					<input type="email" class="form-control" name="email" placeholder="Enter Email" required autocomplete="off">
+					<input type="email" class="form-control" name="email" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"required autocomplete="off">
 				</div>
 			</div>
 			
@@ -84,7 +84,7 @@
 					<input type="text" disabled value="+91" class="form-control" id="code">
 				</div>
 				<div class="col-sm-3">
-					<input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" placeholder="Enter Phone Number" required autocomplete="off">
+					<input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" pattern="[1-9][0-9]*" placeholder="Enter Phone Number" required autocomplete="off">
 				</div>
 			</div>
 			
@@ -92,7 +92,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="class">Class:</label>
 				<div class="col-sm-4">
 					<select name="class" style="color:black" required>
-							<option value="selectclass" selected="true" disabled>Select Class</option>
+							<option value="" selected="true" disabled>Select Class</option>
 							<option>FE</option>
 							<option>SE</option>
 							<option>TE</option>
@@ -105,7 +105,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="branch">Branch:</label>
 				<div class="col-sm-4">
 					<select name="branch" style="color:black" required>
-							<option value="selectdiv" selected="true" disabled>Select Branch</option>
+							<option value="" selected="true" disabled>Select Branch</option>
 							<option>C.E.</option>
 							<option>M.E.</option>
 							<option>E.X.T.C.</option>
@@ -119,7 +119,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="division">Division:</label>
 				<div class="col-sm-4">
 					<select name="division" style="color:black" required>
-							<option value="selectdiv" selected="true" disabled>Select Division</option>
+							<option value="" selected="true" disabled>Select Division</option>
 							<option>A</option>
 							<option>B</option>
 							<option>C</option>

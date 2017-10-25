@@ -26,7 +26,7 @@
 			background-repeat:no-repeat;
 			background-position: center;
 			}
-		</style>
+        </style>
 	</head>
 
 	<body>
@@ -43,8 +43,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -53,6 +53,9 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>
+								<li class="divider"></li>
+								<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>
+								<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>
 								<li class="divider"></li>
 								<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>
 							</ul>
@@ -132,7 +135,6 @@
 		<div class="container" style="color:white"><div class="row"><center>
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/CreateQuiz.php"><button type="button" class="btn btn-primary">Create New Quiz</button></a></div>
 			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
-			<div class="col-xs-4 col-md-4"><a href="/QuizMaster/views/ViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
 		</center></div></div>
 	</h4>
 </body>

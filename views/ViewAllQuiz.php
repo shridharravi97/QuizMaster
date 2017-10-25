@@ -43,8 +43,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -55,13 +55,19 @@
 								<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>
 								<?php if($_SESSION['role']=="student")
 								{
-									echo '<li class="divider"></li>
-											<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
 								}
 								else if($_SESSION['role']=="faculty")
 								{
-									echo '<li class="divider"></li>
-											<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
 								}?>
 							</ul>
 						</li>
@@ -135,7 +141,7 @@ if($_SESSION['role']=="faculty")
         <label class="control-label col-xs-4 col-md-4" for="quizname">Which Quiz Do You Wish To View?</label>
         <div class="col-xs-8">
 			<select name="quizname" style="color:black" required>
-                <option value="quizname" selected="true" disabled>Select Quiz Name</option>';
+                <option value="" selected="true" disabled>Select Quiz Name</option>';
         
     $sql="SELECT * from questionindex where empcode='".$_SESSION['empcode']."' order by id";
     $result=mysqli_query($con,$sql);
@@ -155,7 +161,34 @@ if($_SESSION['role']=="faculty")
         }
     }
     echo '</select></div></div>
-            <center><button type="submit" class="btn btn-primary">View Quiz</button></center>';
+            <center><button type="submit" class="btn btn-primary">View Quiz</button></center></form>';
+	echo'<br><br>';
+			
+	echo '<form class="form-horizontal" method="POST" action="/QuizMaster/views/FacultyResults.php"><div class="form-group" style="color:white">
+                    <label class="control-label col-xs-4 col-md-4" for="quizname">Which Quiz Result Do You Wish To View?</label>
+                    <div class="col-xs-8">
+			             <select name="quizname" style="color:black" required>
+                            <option value="" selected="true" disabled>Select Quiz Name</option>';
+	
+	$sql="SELECT * from questionindex where empcode='".$_SESSION['empcode']."' order by id";
+    $result=mysqli_query($con,$sql);
+
+    if(!$result)
+        die("Query Failed: ".mysqli_error($con));
+        
+    else
+    {
+        if(mysqli_num_rows($result)>0)
+        {
+            while($res=mysqli_fetch_array($result))
+            {
+                $quizname=$res[6];
+                echo '<option>'.$quizname.'</option>';
+            }
+        }
+    }
+	echo '</select></div></div>
+            <center><button type="submit" class="btn btn-primary">View Result</button></center>';
 }
         
 else if($_SESSION['role']=="student")
@@ -169,7 +202,7 @@ else if($_SESSION['role']=="student")
         die("Connection failed: ".mysqli_error($con));
     $date=date("Y-m-d");
     
-    $sql="SELECT * from questionindex where class='".$_SESSION['class']."' and branch='".$_SESSION['branch']."' and division='".$_SESSION['division']."' and lastdate>='".$date."' order by lastdate";
+    $sql="SELECT * from questionindex where class='".$_SESSION['class']."' and branch='".$_SESSION['branch']."' and division='".$_SESSION['division']."' and lastdate>='".$date."' and id not in(select id from result where rollno='".$_SESSION['roll']."') order by lastdate";
     $result=mysqli_query($con,$sql);
     if(!$result)
         die("Query Failed: ".mysqli_error($con));
@@ -225,9 +258,9 @@ else if($_SESSION['role']=="student")
         <label class="control-label col-xs-4 col-md-4" for="quizname">Which Quiz Do You Wish To Attempt?</label>
         <div class="col-xs-8">
 			<select name="quizname" style="color:black" required>
-                <option value="quizname" selected="true" disabled>Select Quiz Name</option>';
+                <option value="" selected="true" disabled>Select Quiz Name</option>';
     
-    $sql="SELECT * from questionindex where class='".$_SESSION['class']."' and branch='".$_SESSION['branch']."' and division='".$_SESSION['division']."' and lastdate>='".$date."' order by lastdate";
+    $sql="SELECT * from questionindex where class='".$_SESSION['class']."' and branch='".$_SESSION['branch']."' and division='".$_SESSION['division']."' and lastdate>='".$date."' and id not in(select id from result where rollno='".$_SESSION['roll']."') order by lastdate";
     $result=mysqli_query($con,$sql);
     if(!$result)
         die("Query Failed: ".mysqli_error($con));

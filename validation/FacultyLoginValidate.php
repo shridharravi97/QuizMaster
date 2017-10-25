@@ -26,9 +26,17 @@
 				$_SESSION['role']=$user;
 				$_SESSION['empcode']=$empcode;
 				$_SESSION['sess_user']=$res[1];
-				echo '<script>alert("Login Successful! You are being redirected to the Home Page");
-						window.location.href="/QuizMaster/views/HomePage.php";
-						</script>';
+                
+                if($p!="faculty@siesgst")
+                {
+				    echo '<script>alert("Login Successful! You are being redirected to the Home Page");
+						  window.location.href="/QuizMaster/views/HomePage.php";
+						  </script>';
+                }
+                else
+                     echo '<script>alert("Login Successful! You are being redirected to the Change Password Page");
+						  window.location.href="/QuizMaster/views/FacultyChangePassword.php";
+						  </script>';
 			}
 			else
 			{

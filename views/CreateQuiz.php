@@ -38,8 +38,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -48,6 +48,9 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>
+								<li class="divider"></li>
+								<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>
+								<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>
 								<li class="divider"></li>
 								<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>
 							</ul>
@@ -84,7 +87,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="class">Class:</label>
 				<div class="col-sm-4">
 					<select name="class" style="color:black" required>
-							<option value="selectclass" selected="true" disabled>Select Class</option>
+							<option value="" selected="true" disabled>Select Class</option>
 							<option>FE</option>
 							<option>SE</option>
 							<option>TE</option>
@@ -97,7 +100,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="branch">Branch:</label>
 				<div class="col-sm-4">
 					<select name="branch" style="color:black" required>
-							<option value="selectdiv" selected="true" disabled>Select Branch</option>
+							<option value="" selected="true" disabled>Select Branch</option>
 							<option>C.E.</option>
 							<option>M.E.</option>
 							<option>E.X.T.C.</option>
@@ -111,7 +114,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="division">Division:</label>
 				<div class="col-sm-4">
 					<select name="division" style="color:black" required>
-							<option value="selectdiv" selected="true" disabled>Select Division</option>
+							<option value="" selected="true" disabled>Select Division</option>
 							<option>A</option>
 							<option>B</option>
 							<option>C</option>

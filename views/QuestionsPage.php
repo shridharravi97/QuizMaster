@@ -42,8 +42,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -52,6 +52,9 @@
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>
+								<li class="divider"></li>
+								<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>
+								<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>
 								<li class="divider"></li>
 								<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>
 							</ul>
@@ -100,22 +103,22 @@
 				echo '<form class="form-horizontal" method="POST" action="/QuizMaster/validation/InsertQuestions.php" style="color:white" name="insertquestions">
 						<div><label class="control-label col-sm-1 col-lg-1 col-md-1">'.$count.':</label>
 							<div class="col-sm-11">
-								<input type="text-area" maxlength="500" class="form-control" name="question" placeholder="Enter Question (max. 500 characters)" required>
+								<input type="text-area" maxlength="500" class="form-control" name="question" placeholder="Enter Question (max. 500 characters)" required autocomplete="off">
 							</div>
 							<br><br><br>
 							<label class="control-label col-sm-2 col-lg-2 col-md-2">A:</label>
 							<div class="col-sm-4">
-								<input type="text-area" maxlength="50" class="form-control" name="optA" placeholder="Enter Option A (max. 50 characters)" required>
+								<input type="text-area" maxlength="50" class="form-control" name="optA" placeholder="Enter Option A (max. 50 characters)" required autocomplete="off">
 							</div>
 							
 							<label class="control-label col-sm-2 col-lg-2 col-md-2">B:</label>
 							<div class="col-sm-4">
-								<input type="text-area" maxlength="50" class="form-control" name="optB" placeholder="Enter Option B (max. 50 characters)" required>
+								<input type="text-area" maxlength="50" class="form-control" name="optB" placeholder="Enter Option B (max. 50 characters)" required autocomplete="off">
 							</div>
 							<br><br>
 							<label class="control-label col-sm-2 col-lg-2 col-md-2">C:</label>
 							<div class="col-sm-4">
-								<input type="text-area" maxlength="50" class="form-control" name="optC" placeholder="Enter Option C (max. 50 characters)" required>
+								<input type="text-area" maxlength="50" class="form-control" name="optC" placeholder="Enter Option C (max. 50 characters)" required autocomplete="off">
 							</div>
 							
 							<label class="control-label col-sm-2 col-lg-2 col-md-2">D:</label>
@@ -127,7 +130,7 @@
 								<label class="control-label col-xs-2 col-md-2" for="answer">Answer:</label>
 								<div class="col-sm-4">
 									<select name="answer" style="color:black" required>
-									<option value="selectanswer" selected="true" disabled>Select Asnwer</option>
+									<option value="" selected="true" disabled>Select Asnwer</option>
 									<option>A</option>
 									<option>B</option>
 									<option>C</option>
@@ -148,7 +151,6 @@
 							<div class="col-xs-3 col-md-3"><a href="/QuizMaster/views/ViewThisQuiz.php"><button type="button" class="btn btn-primary">View This Quiz</button></a></div>
 							<div class="col-xs-3 col-md-3"><a href="/QuizMaster/views/CreateQuiz.php"><button type="button" class="btn btn-primary">Create New Quiz</button></a></div>
 							<div class="col-xs-3 col-md-3"><a href="/QuizMaster/views/ViewAllQuiz.php"><button type="button" class="btn btn-primary">View All Quiz</button></a></div>
-							<div class="col-xs-3 col-md-3"><a href="/QuizMaster/views/ViewResult.php"><button type="button" class="btn btn-primary">View Results</button></a></div>
 						</div></div></center>';
 			}
 		}?>

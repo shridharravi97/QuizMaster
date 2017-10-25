@@ -46,8 +46,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li class="active"><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li class="active"><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<?php
@@ -66,13 +66,19 @@
 											<li><a href="/QuizMaster/views/UserProfile.php">View Profile</a></li>';
 								if($_SESSION['role']=="student")
 								{
-									echo '<li class="divider"></li>
-											<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
 								}
 								else if($_SESSION['role']=="faculty")
 								{
-									echo '<li class="divider"</li>
-											<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/CreateQuiz.php">Create New Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li class="divider"></li>';
+									echo '<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
 								}
 
 								echo '</ul>

@@ -39,8 +39,8 @@
 				 <div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li><a href="/QuizMaster/views/HomePage.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
-						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
+						<li><a href="/QuizMaster/views/ContactUs.php"><span class="glyphicon glyphicon-earphone"></span> Contact</a></li>
+						<li><a href="/QuizMaster/views/About.php"><span class="glyphicon glyphicon-info-sign"></span> About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown active">
@@ -52,12 +52,12 @@
 								<li class="divider"></li>
 								<?php if($_SESSION['role']=="student")
 								{
+									echo '<li><a href="/QuizMaster/views/ViewAllQuiz.php">View Quiz</a></li>';
+									echo '<li><a href="/QuizMaster/views/StudentViewResult.php">View Result</a></li>';
+									echo '<li class="divider"></li>';
 									echo '<li><a href="/QuizMaster/views/ChangePassword.php">Change Password</a></li>';
 								}
-								else if($_SESSION['role']=="faculty")
-								{
-									echo '<li><a href="/QuizMaster/views/FacultyChangePassword.php">Change Password</a></li>';
-								}?>
+								?>
 							</ul>
 						</li>
 						<li><a href="/QuizMaster/validation/Logout.php"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
@@ -70,7 +70,7 @@
 			<div class="form-group">
 				<label class="control-label col-xs-3 col-md-4" for="name">Full Name:</label>
 				<div class="col-sm-4">
-					<input type="text" class="form-control" name="name" value="<?php echo $_SESSION['sess_user']; ?>" required>
+					<input type="text" class="form-control" name="name" value="<?php echo $_SESSION['sess_user']; ?>" pattern="[a-zA-Z][a-zA-z ]*" required autocomplete="off">
 				</div>
 			</div>
 			
@@ -94,7 +94,7 @@
 					<input type="text" disabled value="+91" class="form-control" id="code">
 				</div>
 				<div class="col-sm-3">
-					<input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" value="<?php echo $_SESSION['phone']; ?>" required>
+					<input type="tel" maxlength="10" minlength="10" class="form-control" name="phone" value="<?php echo $_SESSION['phone']; ?>" pattern="[1-9][0-9]*" autocomplete="off" required>
 				</div>
 			</div>
 			
@@ -102,7 +102,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="class">Class:</label>
 				<div class="col-sm-4">
 					<select name="class" style="color:black" required>
-							<option selected="true"><?php echo $_SESSION['class']; ?></option>
+							<option selected="true" readonly><?php echo $_SESSION['class']; ?></option>
 							<option>FE</option>
 							<option>SE</option>
 							<option>TE</option>
@@ -115,7 +115,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="branch">Branch:</label>
 				<div class="col-sm-4">
 					<select name="branch" style="color:black" required>
-							<option selected="true"><?php echo $_SESSION['branch']; ?></option>
+							<option selected="true" readonly><?php echo $_SESSION['branch']; ?></option>
 							<option>C.E.</option>
 							<option>M.E.</option>
 							<option>E.X.T.C.</option>
@@ -129,7 +129,7 @@
 				<label class="control-label col-xs-3 col-md-4" for="division">Division:</label>
 				<div class="col-sm-4">
 					<select name="division" style="color:black" required>
-							<option selected="true"><?php echo $_SESSION['division']; ?></option>
+							<option selected="true" readonly><?php echo $_SESSION['division']; ?></option>
 							<option>A</option>
 							<option>B</option>
 							<option>C</option>
