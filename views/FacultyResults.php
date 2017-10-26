@@ -76,8 +76,16 @@
                 die("Connection failed: ".mysqli_error($con));
             
             $quizname=$_POST['quizname'];
+            $abc="select id from questionindex where quizname='".$quizname."' and empcode='".$_SESSION['empcode']."'";
+            $abcresult=mysqli_query($con,$abc);
+            if(!$abcresult)
+                die("Query Failed: ".mysqli_error($con));
+            else
+                $val=mysqli_fetch_array($abcresult);
             
-            $sql="SELECT rollno,count(rollno) from result where id in(select id from questionindex where quizname='".$quizname."' and empcode='".$_SESSION['empcode']."') and studans=answer order by rollno";
+            $id=$val[0];
+            
+            $sql="select a.rollno,(select count(rollno) from result b where b.id='".$id."' and a.rollno=b.rollno and studans=answer) from result a where a.id='".$id."' group by a.rollno";
             $result=mysqli_query($con,$sql);
             if(!$result)
                 die("Query Failed: ".mysqli_error($con));

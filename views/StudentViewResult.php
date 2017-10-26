@@ -92,7 +92,7 @@
             if(!$con)
                 die("Connection Failed: ".mysqli_error($con));
         
-            $sql="SELECT id,count(rollno) from result where rollno='".$_SESSION['roll']."' and studans=answer group by id";
+            $sql="select a.id,(select count(rollno) from result b where b.rollno='".$_SESSION['roll']."'and a.id=b.id and studans=answer) as marks from result a where a.rollno='".$_SESSION['roll']."' group by a.id";
             $result=mysqli_query($con,$sql);
             if(!$result)
                 die("Query Failed: ".mysqli_error($con));
