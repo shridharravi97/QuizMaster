@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-lg-4">
                         <img class="img-responsive img-rounded" src="/QuizMaster/img/3.jpg" height="200" width="250">
-                        <h3 style="color:white">Siddhanth V</h3>
+                        <h3 style="color:white">Siddhanth V.</h3>
                         <h4 style="color:white">Front-End Developer</h4>
                         <span title="Facebook"><a href="https://www.facebook.com/siddhanth.iyer.5" target="_blank"><i class="fa fa-facebook-square" style="font-size:50px;color:white"></i></a></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <span title="GitHub"><a href="https://github.com/sidv98" target="_blank"><i class="fa fa-github" style="font-size:50px; color: white"></i></a></span>
