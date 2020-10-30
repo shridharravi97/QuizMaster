@@ -1,2 +1,4 @@
-# quizmaster1.0
-A Web Based Quiz System for the Students to practice the lessons taught.
+
+# QuizMaster
+A Web Based Quiz System as part of Mumbai University Minor Project
+
